@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Submit Stack') {
             steps {
-            sh "aws cloudformation create-stack --stack-name s3bucket --template-body file://ec2-single-instance.json --region 'us-east-1'"
+            sh "aws cloudformation create-stack --stack-name ec2-single-instance --template-body file://ec2-single-instance.json --region 'us-east-1'"
               }
              }
             }
